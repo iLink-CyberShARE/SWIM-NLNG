@@ -1,0 +1,78 @@
+
+# # Service Configuration
+server:
+   applicationConnectors:
+     - type: http
+       port: 5030
+       acceptorThreads: 2
+       selectorThreads: 4
+   #health check and admin port
+   adminConnectors:
+     - type: http
+       port: 5031
+
+logging:
+  level: DEBUG
+  appenders:
+    # Log warnings and errors to file
+    - type: file
+      currentLogFilename: ./logs/swim-nlng.log
+      threshold: WARN
+      queueSize: 512
+      discardingThreshold: 0
+      archive: true
+      archivedLogFilenamePattern: ./logs/swim-nlng-%d.log
+      archivedFileCount: 5
+      timeZone: UTC
+      logFormat: "%-5p [%d{ISO8601,UTC}] %c: %m%n%rEx"
+      bufferSize: 8KiB
+      immediateFlush: true   
+    # log debug on console (testing only)
+    - type: console
+      threshold: ERROR
+      target: stdout
+
+# SWIM Model Database
+swimdbuser: ${SWIMDBUSER}
+swimdbpassword: ${SWIMDBPASSWORD}
+swimdbhost: ${SWIMDBHOST}
+swimdbname: ${SWIMDBNAME}
+swimdbport:  ${SWIMDBPORT:- 27017}
+swimdbauth: ${SWIMDBAUTH} 
+
+# SWIM Narrative Database
+narrativedbuser:  ${NARRATIVEDBUSER}
+narrativedbpassword: ${NARRATIVEDBPASSWORD}
+narrativedbhost: ${NARRATIVEDBHOST}
+narrativedbname: ${NARRATIVEDBNAME}
+narrativedbport:  ${NARRATIVEDBPORT:- 27017}
+narrativedbauth: ${NARRATIVEDBAUTH} 
+
+# Auth Key Database
+authDBDriver: ${AUTHDBDRIVER:- mysql}
+authDBHost: ${AUTHDBHOST}
+authDBPort: ${AUTHDBPORT:- 3306}
+authDBName: ${AUTHDBNAME}
+authDBUser: ${AUTHDBUSER}
+authDBPassword: ${AUTHDBPASSWORD}
+
+# User Database
+userDBDriver: ${USERDBDRIVER:- mysql}
+userDBHost: ${USERDBHOST}
+userDBPort: ${USERDBPORT:- 3306}
+userDBName: ${USERDBNAME}
+userDBUser: ${USERDBUSER}
+userDBPassword: ${USERDBPASSWORD}
+
+# Swagger Docs Bundle Settings
+swagger:
+  contextRoot: /swim-nlng
+  schemes: ['https', 'http']
+  resourcePackage: utep.ilink.swimnlng.services.controller
+  title: SWIM Natural Language Narrative Generator
+  version: 2.0
+  description: Webservice for the generation of model output narratives
+  termsOfServiceUrl: https://swim.cybershare.utep.edu/en/policy
+  licenseUrl: https://creativecommons.org/licenses/by-nc/4.0/
+  contactEmail: swim@utep.edu
+  enabled: ${SWAGGER:- false}

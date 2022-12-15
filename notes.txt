@@ -1,0 +1,21 @@
+# How to run
+Generate a new jar file with: mvn package, mvn clean install
+Run jar file with: java -jar target/${name-of-jar}.jar server settings.yml  --  java -jar ".\target\swim-nlng-2.0.0.jar" server settings.yml
+Swagger end points at: http://localhost:5030/swagger
+Open browser at: http://localhost:5030/main
+Open browser at: http://localhost:5030/main?name=Your+name
+Admin tools at: http://localhost:5031
+
+# How to Genenerate the docker 
+
+Note: uses Luis's repo on dockerhub
+
+Docker commands:
+1. Create docker file (Dockerfile)
+2. Create ignore file (.dockerignore)
+3. docker build -t lagarnicachavira/swim-nlng:latest .
+4. docker run -p 5030-5031:5030-5031 lagarnicachavira/swim-nlng
+5. Create docker compose file
+6. docker compose up (explicit run)
+6b. docker compose up -d (background run)
+7. docker push lagarnicachavira/swim-nlng

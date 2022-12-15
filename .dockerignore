@@ -1,0 +1,21 @@
+# mvn package files & folders
+target/
+dependency-reduced-pom.xml
+
+# Ignore vs code IDE folders
+.vscode/
+
+# Ignore docker compose file
+docker-compose.yml
+
+# Ignore development settings file
+settings.yml
+
+# Ignore resources folder
+resources/
+
+# Ignore git and cache folders
+.git
+.cache
+
+notes.txt

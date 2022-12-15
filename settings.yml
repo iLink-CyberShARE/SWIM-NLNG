@@ -1,0 +1,77 @@
+
+# # Service Configuration
+server:
+   applicationConnectors:
+     - type: http
+       port: 5030
+       acceptorThreads: 2
+       selectorThreads: 4
+   #health check and admin port
+   adminConnectors:
+     - type: http
+       port: 5031
+
+logging:
+  level: DEBUG
+  appenders:
+    # Log warnings and errors to file
+    - type: file
+      currentLogFilename: ./logs/swim-nlng.log
+      threshold: WARN
+      queueSize: 512
+      discardingThreshold: 0
+      archive: true
+      archivedLogFilenamePattern: ./logs/swim-nlng-%d.log
+      archivedFileCount: 5
+      timeZone: UTC
+      logFormat: "%-5p [%d{ISO8601,UTC}] %c: %m%n%rEx"
+      bufferSize: 8KiB
+      immediateFlush: true   
+    # log debug on console (testing only)
+    - type: console
+      threshold: ERROR
+      target: stdout
+
+# SWIM Model Database
+swimdbuser: ${SWIMDBUSER:- user}
+swimdbpassword: ${SWIMDBPASSWORD:- password}
+swimdbhost: ${SWIMDBHOST:- localhost}
+swimdbname: ${SWIMDBNAME:- modeldb}
+swimdbport:  ${SWIMDBPORT:- 27017}
+swimdbauth: ${SWIMDBAUTH:- admin}  
+
+# SWIM Narrative Database
+narrativedbuser:  ${NARRATIVEDBUSER:- user}
+narrativedbpassword: ${NARRATIVEDBPASSWORD:- password}
+narrativedbhost: ${NARRATIVEDBHOST:- localhost}
+narrativedbname: ${NARRATIVEDBNAME:- narrative}
+narrativedbport:  ${NARRATIVEDBPORT:- 27017}
+narrativedbauth: ${NARRATIVEDBAUTH:- admin} 
+
+# Auth Key Database
+authDBDriver: ${AUTHDBDRIVER:- mysql}
+authDBHost: ${AUTHDBHOST:- localhost}
+authDBPort: ${AUTHDBPORT:- 3306}
+authDBName: ${AUTHDBNAME:- swim-log}
+authDBUser: ${AUTHDBUSER:- swim-log}
+authDBPassword: ${AUTHDBPASSWORD:- password}
+
+# User Database
+userDBDriver: ${USERDBDRIVER:- mysql}
+userDBHost: ${USERDBHOST:- localhost}
+userDBPort: ${USERDBPORT:- 3306}
+userDBName: ${USERDBNAME:- userdb}
+userDBUser: ${USERDBUSER:- userdb}
+userDBPassword: ${USERDBPASSWORD:- password}
+
+# Narratives Database
+swagger:
+  schemes: ['http','https']
+  resourcePackage: utep.ilink.swimnlng.services.controller
+  title: SWIM Natural Language Narrative Generator
+  version: 2.0
+  description: Webservice for the generation of model output narratives
+  termsOfServiceUrl: https://swim.cybershare.utep.edu/en/policy
+  licenseUrl: https://creativecommons.org/licenses/by-nc/4.0/
+  contactEmail: swim@utep.edu
+  enabled: ${SWAGGER:- true}

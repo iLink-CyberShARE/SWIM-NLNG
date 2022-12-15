@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  swim-nlng: 
+    container_name: swim-nlng
+    image: lagarnicachavira/swim-nlng:latest
+    restart: unless-stopped
+    environment:
+      - SWIMDBUSER=user
+      - SWIMDBPASSWORD=password
+      - SWIMDBHOST=localhost
+      - SWIMDBNAME=modeldb
+      - SWIMDBPORT=27017
+      - SWIMDBAUTH=admin
+      - NARRATIVEDBUSER=user
+      - NARRATIVEDBPASSWORD=password
+      - NARRATIVEDBHOST=localhost
+      - NARRATIVEDBNAME=narrative
+      - NARRATIVEDBPORT=27017
+      - NARRATIVEDBAUTH=admin
+      - AUTHDBDRIVER=mysql
+      - AUTHDBHOST=localhost
+      - AUTHDBPORT=3306
+      - AUTHDBNAME=swim-log
+      - AUTHDBUSER=user
+      - AUTHDBPASSWORD=password
+      - USERDBDRIVER=mysql
+      - USERDBHOST=localhost
+      - USERDBPORT=3306
+      - USERDBNAME=userdb
+      - USERDBUSER=user
+      - USERDBPASSWORD=password
+      - SWAGGER=false
+    ports:
+      # <host port> : <application port>
+      - '6040:5030'
+      - '6041:5031'
+    volumes:
+      - ./logs:/swim-nlng/logs

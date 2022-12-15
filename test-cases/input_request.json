@@ -1,0 +1,180 @@
+{
+    "scenarioid": "a9f1665f-7d5c-4d1a-a963-5bf74f6cb6a7",
+    "language": "en-us",
+    "role": "Student",
+    "output": {
+      "modelID": "5d76cc181328534d8cb7d17c",
+      "varinfo": [
+        {
+          "varLabel": "Hueco Bolson Total Cumulative Loss",
+          "varCategory": "Storage",
+          "lang": "en-us",
+          "varDescription": "Total consumptive water use from the Hueco Bolson aquifer from both urban and agricultural sectors",
+          "varUnit": "Thousands of Acre-Feet"
+        },
+        {
+          "varLabel": "Pérdida Total Acumulativa en Bolson del Hueco",
+          "varCategory": "Almacenamiento",
+          "lang": "es-mx",
+          "varDescription": "Consumo total de agua proveniente del Bolsón del Hueco para uso urbano y agrícola",
+          "varUnit": "Miles de Acre-Pies"
+        }
+      ],
+      "varName": "HB_Cum_Loss",
+      "varValue": [
+        {
+          "value": 350.3257353566608
+        },
+        {
+          "value": 683.9291240797961
+        },
+        {
+          "value": 841.969377244353
+        },
+        {
+          "value": 1000.00963040891
+        },
+        {
+          "value": 1158.049883573467
+        },
+        {
+          "value": 1319.334594562861
+        },
+        {
+          "value": 1569.4928622898656
+        },
+        {
+          "value": 1932.0189184059302
+        },
+        {
+          "value": 2324.4391465823874
+        },
+        {
+          "value": 2708.6682019424393
+        },
+        {
+          "value": 3061.922073608368
+        },
+        {
+          "value": 3346.7848561607143
+        },
+        {
+          "value": 3599.3870329667025
+        },
+        {
+          "value": 3757.4272861312593
+        },
+        {
+          "value": 3915.467539295816
+        },
+        {
+          "value": 4073.507792460373
+        },
+        {
+          "value": 4264.753332329807
+        },
+        {
+          "value": 4551.948187091999
+        },
+        {
+          "value": 4908.929704333466
+        },
+        {
+          "value": 5303.011736512217
+        },
+        {
+          "value": 5556.749489633116
+        },
+        {
+          "value": 5759.380779755202
+        },
+        {
+          "value": 5971.99682308714
+        },
+        {
+          "value": 6264.5601996332025
+        },
+        {
+          "value": 6585.9028862588375
+        },
+        {
+          "value": 6916.994401059598
+        },
+        {
+          "value": 7265.049586457804
+        },
+        {
+          "value": 7574.087325616892
+        },
+        {
+          "value": 7940.958997149717
+        },
+        {
+          "value": 8115.726961875444
+        },
+        {
+          "value": 8370.412657706516
+        },
+        {
+          "value": 8607.238571503143
+        },
+        {
+          "value": 8924.020852072348
+        },
+        {
+          "value": 9300.469081207644
+        },
+        {
+          "value": 9710.142082396154
+        },
+        {
+          "value": 10131.525859366144
+        },
+        {
+          "value": 10530.330818501365
+        },
+        {
+          "value": 10902.046877026416
+        },
+        {
+          "value": 11259.43914397977
+        },
+        {
+          "value": 11517.017719746473
+        },
+        {
+          "value": 11798.143570362698
+        },
+        {
+          "value": 12138.02057712039
+        },
+        {
+          "value": 12519.055008569809
+        },
+        {
+          "value": 12932.627232960354
+        },
+        {
+          "value": 13343.110440128863
+        },
+        {
+          "value": 13747.54438975913
+        },
+        {
+          "value": 14070.054155369191
+        },
+        {
+          "value": 14231.42260945289
+        },
+        {
+          "value": 14389.462862617447
+        },
+        {
+          "value": 14547.503115782005
+        },
+        {
+          "value": 14705.543368946563
+        }
+      ]
+    }
+  }
