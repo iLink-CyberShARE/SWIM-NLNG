@@ -38,9 +38,9 @@ For a native installation make sure to have Java and Maven installed on your tar
 4. Once running, the API documentation will be locally available at http://localhost:5030/swagger
 
 ## Contributors
-Lead Developer - Angel Ortega
-Developer - Luis Garnica
-Developer - Raul Alejandro Vargas Acosta
+Lead Developer - Angel Ortega   
+Developer - Luis Garnica   
+Developer - Raul Alejandro Vargas Acosta   
 
 ## Acknowledgements
 This material is based upon work supported by the National Science Foundation (NSF) under Grant No. 1835897.   
