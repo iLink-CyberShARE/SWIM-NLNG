@@ -2,7 +2,7 @@ version: '3.8'
 services:
   swim-nlng: 
     container_name: swim-nlng
-    image: lagarnicachavira/swim-nlng:latest
+    image: lagarnicachavira/swim-nlng-public:latest
     restart: unless-stopped
     environment:
       - SWIMDBUSER=user

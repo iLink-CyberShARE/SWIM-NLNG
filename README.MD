@@ -38,20 +38,22 @@ For a native installation make sure to have Java and Maven installed on your tar
 4. Once running, the API documentation will be locally available at http://localhost:5030/swagger
 
 ## Contributors
-Lead Developer - Angel Ortega   
-Developer - Luis Garnica   
-Developer - Raul Alejandro Vargas Acosta   
+Angel Ortega   
+Luis Garnica  
+Raul Alejandro Vargas Acosta    
 
 ## Acknowledgements
 This material is based upon work supported by the National Science Foundation (NSF) under Grant No. 1835897.   
 
 Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
 
-## Copyright
-© 2022 University of Texas at El Paso (SWIM Project)
-
 ## License
-GNU GENERAL PUBLIC LICENSE v3.0
+This software code is licensed under the [GNU GENERAL PUBLIC LICENSE v3.0](./LICENSE) and uses third party libraries that are distributed under their own terms (see [LICENSE-3RD-PARTY.md](./LICENSE-3RD-PARTY.md)).
+
+## Copyright
+© 2015-2023 University of Texas at El Paso (SWIM Project) 
+
+
 
 
 
